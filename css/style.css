@@ -201,10 +201,33 @@ footer a{
     justify-content: center;
 }
 
+#mobile-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dpad-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.dpad-row.center {
+    justify-content: center;
+}
+
 .control-btn {
-    width: 60px;
-    height: 60px;
-    font-size: 24px;
+    width: 18vw;
+    height: 18vw;
+    max-width: 80px;
+    max-height: 80px;
+    font-size: 8vw;
+    max-font-size: 36px;
     border-radius: 50%;
     border: none;
     background: linear-gradient(145deg, #ffffff, #e6e6e6);
@@ -221,16 +244,24 @@ footer a{
 
 @media screen and (max-width: 600px) {
     .control-btn {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-    }
-
-    #mobile-controls {
-        bottom: 10px;
-        left: 10px;
+        width: 20vw;
+        height: 20vw;
+        font-size: 9vw;
+        max-width: 100px;
+        max-height: 100px;
     }
 }
+
+@media screen and (max-width: 400px) {
+    .control-btn {
+        width: 22vw;
+        height: 22vw;
+        font-size: 10vw;
+        max-width: 120px;
+        max-height: 120px;
+    }
+}
+
 
 
 
