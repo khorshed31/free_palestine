@@ -181,6 +181,59 @@ footer a{
 }
 
 
+#mobile-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dpad-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.dpad-row.center {
+    justify-content: center;
+}
+
+.control-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 4px 4px 8px #d1d1d1, -4px -4px 8px #ffffff;
+    transition: all 0.2s ease;
+    touch-action: manipulation;
+}
+
+.control-btn:active {
+    background: #ddd;
+    box-shadow: inset 4px 4px 6px #bebebe, inset -4px -4px 6px #ffffff;
+    transform: scale(0.95);
+}
+
+@media screen and (max-width: 600px) {
+    .control-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    #mobile-controls {
+        bottom: 10px;
+        left: 10px;
+    }
+}
+
+
+
 
 @media (max-width: 768px) {
     body {
